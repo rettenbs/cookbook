@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title_addon %} - {{ recipe.name }}{% endblock %}
+
+{% block body %}
+
+<form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <div><input type="submit" value="{% trans "Update" %}"></div>
+</form>
+
+{% endblock %}

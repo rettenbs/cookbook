@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block body %}
+
+<div class="table">
+{% for recipe in recipes %}
+<div class="tableRow">
+ <div class="tableCell"><a href="view/{{ recipe.id }}">{{ recipe.name }}</a></div>
+ <div class="tableCell"><a href="edit/{{ recipe.id }}">{% trans "edit" %}</a></div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}

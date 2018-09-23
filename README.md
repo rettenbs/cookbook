@@ -9,3 +9,9 @@ source bin/activate
 
 cd cookbook
 ./manage.py runserver
+
+
+## Update Database
+
+./manage.py makemigrations
+./manage.py migrate

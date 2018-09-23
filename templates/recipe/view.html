@@ -1,9 +1,10 @@
-{% include "header.html" %}
+{% extends "base.html" %}
 
-<div>
-{% for recipe in recipes %}
-<div>{{ recipe }}</div>
-{% endfor %}
-</div>
+{% block title_addon %} - {{ recipe.name }}{% endblock %}
 
-{% include "footer.html" %}
+{% block body %}
+
+<div>{{ recipe.name }}</div>
+<div>{{ recipe.description }}</div>
+
+{% endblock %}
