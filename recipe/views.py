@@ -1,4 +1,4 @@
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.shortcuts import render
 
 from recipe.models import Recipe
@@ -15,12 +15,17 @@ def index(request):
     })
 
 
-def view(request, id):
+def view(request, pk):
     '''View a recipe'''
     return render(request, 'recipe/view.html', {
-        'recipe': Recipe.objects.get(pk=id)
+        'recipe': Recipe.objects.get(pk=pk)
     })
-    
+
+
+class RecipeAdd(CreateView):
+    model = Recipe
+    fields = ['name', 'description']
+    success_url = '/'
 
 
 class RecipeUpdate(UpdateView):
