@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-{% load static %}
-<html>
-<head>
- <title>Cookbook{% block title_addon %}{% endblock %}</title>
- <link rel="stylesheet" href="{% static "styles.css" %}">
-</head>
-<body>
-<div>
-</div>
-<div id="body">
-{% block body %}{% endblock %}
-</div>
-</body>
-</html>
+{% extends "simple.html" %}
+
+{% block body %}
+<div id="leftpanel">{% include "user/login.html" %}</div>
+<div id="content">{% block content %}{% endblock %}</div>
+{% endblock %} 

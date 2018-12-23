@@ -1,4 +1,25 @@
 /* Tables */
 .table     { display: table; }
 .tableRow  { display: table-row; }
-.tableCell { display: table-cell; }
+.tableCell {
+    display: table-cell;
+    padding: 2px 2px;
+}
+
+/* Body */
+
+/* Left panel */
+#leftpanel {
+    z-index: 1;
+    position: fixed;
+    width: 180px;
+    top: 0px;
+    left: 10px;
+    padding: 8px 0;
+}
+
+/* Content */
+#content {
+    padding: 0 10px;
+    margin-left: 190px
+}

@@ -10,6 +10,10 @@ source bin/activate
 cd cookbook
 ./manage.py runserver
 
+## Create a new app
+
+./manage.py startapp <name>
+
 
 ## Update Database
 
